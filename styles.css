@@ -1,0 +1,237 @@
+*{
+    box-sizing: border-box;
+    scroll-behavior:smooth;
+    margin: 0;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+body{
+    background-color: #f0e5cf;
+    margin: 0;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+p{
+    font-family:"fantasy",sans-serif ;
+}
+
+header{
+    width:100%;
+    height:60px;
+    background-color:#191919;
+    max-width: auto;
+    position: fixed;
+    top: 0;
+}
+  
+header > nav > ul {
+    display:flex;
+    justify-content: space-evenly;
+    align-items:center;
+    flex-flow: row wrap;
+}
+  
+header > nav > ul > li {
+    list-style:none;
+}
+
+header > nav > ul > li > a  {
+    font-size:2vw;
+    color:white;
+    text-decoration:none;
+    letter-spacing: 2px;
+}
+
+header > nav > ul > li >a:hover,
+#main #img-caption a:hover{
+    text-decoration: line-through;
+    background-color: white;
+    padding: 0px 20px;
+    color: #191919;
+    transition: 1s;
+    
+}
+
+#logo{
+    height:60px;
+    margin-left:10px;
+    object-fit:cover;
+  }
+
+/*main page*/
+
+#main{
+    width: 100%;
+    padding-top: 90px;
+}
+
+#main #image{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+#main #title{
+    text-align: center;
+    font-family: 'Caprasimo', "cursive";
+    font-size: 8vw;
+}
+
+#main #img-caption{
+    font-family: "fantasy",sans-serif;
+    text-align: center;
+    font-size: 5vw;
+    background-color: #191919;
+}
+
+#main #img-caption a{
+    text-decoration: none;
+    color: white;
+}
+
+#main #img-caption a:hover{
+    background-color: white;
+    color: #191919;
+}
+
+/**/
+#tribute-info{
+    width: 95%;
+    margin: 10px auto;
+}
+
+#tribute-info p{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 25px;
+    text-align: justify;
+}
+
+#tribute-info p:first-child{
+    margin-top: 50px;
+}
+
+#tribute-info p:last-child{
+    text-align: center;
+    margin-top: -20px;
+}
+
+hr{
+    border: 10px solid #191919;
+    margin-top:-13px ;
+}
+
+/*album page*/
+#album{
+    padding: 10px;
+    background-color: whitesmoke;
+}
+
+#album h2{
+    font-size: 4.5em;
+    letter-spacing: 0.2em;
+}
+
+#album h2{
+    text-align: center;
+}
+
+#album #album-list{
+    width: 80%;
+    margin:25px auto 0px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    row-gap: 20px;
+}
+
+#album-list a{
+    text-decoration: none;
+    color: #f0e5cf;
+    font-size: 25px;
+}
+
+#album-list a img{
+    width: 300px;
+    border-radius: 10px 10px 0px 0px;
+    z-index: 10;
+    object-fit: cover;
+}
+
+
+#album-list a #album-detail{
+    width: 100%;
+    opacity: 0;
+}
+
+#album-list a:hover{
+    background-color: #191919;
+    transition: 1s;
+    border-radius: 10px;
+    
+    #album-detail{
+        text-align: center;
+        transition: 1s;
+        opacity: 1;
+    }
+}
+
+/*in phone*/
+@media(max-width:970px) {
+    header{
+        height:max-content;
+        position: static;
+    }
+    
+    header > nav > ul{
+        padding: 0px;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column wrap;
+    }
+
+    header > nav > ul > li > a {
+        font-size: 5vw;
+        text-align: center;
+    }
+
+    header > nav > ul > li:first-child{
+        padding-top: 10px;
+    }
+
+    #logo{
+        margin: auto;
+    }
+
+    /**/
+
+    #main #image{
+        width: 50%;
+        border: 20px solid white;
+        min-width: 350px;
+    }
+
+    #main #title{
+        margin-top: -60px;
+    }
+
+    #main #img-caption{
+        background-color: #f0e5cf;
+        border-bottom:10px solid #191919;
+    }
+    
+    #main #img-caption a{
+        text-decoration: none;
+        color: #191919;
+    }
+    
+    #main #img-caption a:hover{
+        background-color: white;
+        color: #191919;
+    }
+}
