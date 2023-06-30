@@ -101,7 +101,15 @@ header > nav > ul > li >a:hover,
 /**/
 #tribute-info{
     width: 95%;
-    margin: 10px auto;
+    height: max-content;
+    margin: 0px auto;
+    padding-top:3em ;
+}
+
+#tribute-info h2{
+    font-size: 4.5em;
+    letter-spacing: 0.2em;
+    text-align: center;
 }
 
 #tribute-info p{
@@ -120,22 +128,19 @@ header > nav > ul > li >a:hover,
 }
 
 hr{
-    border: 10px solid #191919;
-    margin-top:-13px ;
+    border: 1em solid #191919;
+    margin-top:-2px ;
 }
 
 /*album page*/
 #album{
-    padding: 10px;
+    padding: 3em 0px;
     background-color: whitesmoke;
 }
 
 #album h2{
     font-size: 4.5em;
     letter-spacing: 0.2em;
-}
-
-#album h2{
     text-align: center;
 }
 
@@ -157,7 +162,7 @@ hr{
 }
 
 #album-list a img{
-    width: 300px;
+    width: 260px;
     border-radius: 10px 10px 0px 0px;
     z-index: 10;
     object-fit: cover;
@@ -180,6 +185,38 @@ hr{
         opacity: 1;
     }
 }
+
+/**/
+footer{
+    width: 100%; 
+    background-color: #191919;
+    margin-top: 3em;
+}
+
+footer p{
+    color: #f0e5cf;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2em;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+footer address{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+footer address a svg{
+    width: 35px;
+    height: 2.5em;
+    color: #f0e5cf;
+    margin: 2em 25px 25px 25px;
+}
+
 
 /*in phone*/
 @media(max-width:970px) {
@@ -234,4 +271,7 @@ hr{
         background-color: white;
         color: #191919;
     }
+
+    /**/
+    
 }
